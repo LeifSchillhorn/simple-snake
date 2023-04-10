@@ -55,8 +55,9 @@ class Snake:
     def getState(self):
         """_summary_
         """
-        self.body.getList()
-        self.score
-        self.fruitX
-        self.fruitY
+        return (self.body.getList(), self.score, self.fruitX, self.fruitY )
+
+    def printState(self):
+        state = self.getState()
+        print(f"The body is in the positions: {state[0]} \nThe score is {state[1]} \nThe fruit is in the position {(state[2], state[3])}")
 
